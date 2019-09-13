@@ -21,7 +21,7 @@
                 }									
 			],
           "outArguments": [],
-          "url": "https://<your-domain-here>/journeybuilder/execute",
+          "url": "https://ragsdale-customjbactivity.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -31,24 +31,24 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "__application_key_from_appcenter_here__",
+      "applicationExtensionKey": "e6f7fdc7-df56-4297-b2fd-6e5a1dc8fd1e",
       "save": {
-        "url": "https://mcdgh6zb-3v79rzh9lbzr6m-1pxq/journeybuilder/save",
+        "url": "https://ragsdale-customjbactivity.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://mcdgh6zb-3v79rzh9lbzr6m-1pxq/journeybuilder/publish",
+        "url": "https://ragsdale-customjbactivity.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://mcdgh6zb-3v79rzh9lbzr6m-1pxq/journeybuilder/stop",
+        "url": "https://ragsdale-customjbactivity.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://mcdgh6zb-3v79rzh9lbzr6m-1pxq/journeybuilder/validate",
+        "url": "https://ragsdale-customjbactivity.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
