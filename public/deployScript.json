@@ -1,0 +1,95 @@
+{
+	"Name": "Simple Custom Journey Builder Activity",
+	"Image": "/images/dd301_logo.png",
+	"Thumbnail": "/images/dd301_logo.png",
+	"ShortDescription": "Super Basic Custom Journey Builder Activity",
+    "LongDescription": "This form will go through the steps required to get a Custome Journey BUilder app deployed to heroku and connected to your Marketing Cloud Account. Before you run the deployer please ensure that you are logged into Heroku in another tab. <a href='https://heroku.com/'>Click Here to login</a>",
+	"UI": {
+		"Rows": [
+			{
+				"Heading": "Marketing Cloud API",
+				"Fields": [
+					{
+						"Category": "Input",
+						"Name": "Journey Builder Activity Name",						
+						"Placeholder" : "My Custom JB Activity",
+						"Required": "1",
+						"Variable": {
+							"Name": "jbActivityName",
+							"Category": "String"
+						}
+					},
+					{
+						"Category": "Input",
+						"Name": "URI/Subdomain",
+						"Placeholder": "mc4ctz9z113jhdgyypmn4lkfjfq3",
+						"Required": "1",
+						"Variable": {
+							"Name": "MC_Client_URI",
+							"Category": "String"
+						}
+					}
+				]
+			},
+			{
+				"Fields": [
+					{
+						"Category": "Input",
+						"Name": "Client ID",
+						"Placeholder": "h5ve9ah9ddpmy7lqvv2lcjbl",
+						"Required": "1",
+						"Variable": {
+							"Name": "MC_Client_ID",
+							"Category": "String"
+						}
+					},
+					{
+						"Category": "Input",
+						"Name": "Client Secret",
+						"Placeholder": "NXUKELFnAZYCsqGxCjWL6Sej",
+						"Required": "1",
+						"Variable": {
+							"Name": "MC_Client_Secret",
+							"Category": "String"
+						}
+					}
+				]
+			}
+		]
+	},
+	"Sequence": {
+		"Name": "Create a Heroku Application",
+		"Steps": [
+			{
+				"Category": "REST API",
+				"Description": "Call the Heroku App Create endpoint",
+				"Method": "POST",
+				"URL": "https://api.heroku.com/apps",
+				"Header": {
+                    "Content-Type": "application/json",
+                    "Accept" : "application/vnd.heroku+json; version=3"
+				},
+				"Body": {
+					"name": "%%jbActivityName%%"
+				},
+				"Success": [
+					{
+						"Response": "200"
+					}
+				],
+				"Assignments": {
+					"Assignment": {
+						"Variable": {
+							"Name": "git_rul",
+							"Category": "String"
+						},
+						"Source": {
+							"Name": "web_url",
+							"Category": "JSON_Response"
+						}
+					}
+				}
+			}			
+		]
+	}
+}
