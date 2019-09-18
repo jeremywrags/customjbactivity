@@ -9,19 +9,6 @@
 * A Marketing Cloud Account with Journey Builder
 * A publicly accessible web server (this template was built using a free [Heroku](https://heroku.com) account with SSL support
 
-### Getting Started
-
-#### Configure web server 
-This guide covers Heroku, skip this step if you are familiar on how to deploy a Node.js app
-
-1. Fork and Clone this repository
-2. Login into [Heroku](https://heroku.com)
-3. Click on New > Create new app
-4. Give a name to the app and click on "Create App"
-5. Choose your preferred Deployment method (Github or Heroku Cli are nice to work with) 
-6. Click on "Deploy branch"
-7. Once your branch is deployed, click on the "View" button and verify you see the welcome message
-
 #### Configure your package in Marketing Cloud
 
 1. Login to Marketing Cloud and Navigate to Administration > Account > Installed Packages
@@ -38,6 +25,8 @@ This guide covers Heroku, skip this step if you are familiar on how to deploy a 
 * Replace __application_key_from_appcenter_here__ for the value you got from step 7 from the previous section
 * Replace [your-domain-here] with the domain for your website
 2. Open /public/images and replace with the icons for the activity to your liking
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 #### Add Heroku vars
 
